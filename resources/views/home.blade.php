@@ -1,5 +1,9 @@
 @extends('layouts/main')
 
 @section('content')
-ciao
+<main>
+    <div id="container">
+        <a href="{{route('comics.index')}}">Vai ai fumetti</a>
+    </div>
+</main>
 @endsection
