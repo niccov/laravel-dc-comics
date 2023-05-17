@@ -17,5 +17,18 @@
        </ul>
        <p>{{ $comic->description }}</p>
     </div>
+
+    <div>
+      <a href="{{route('comics.edit', $comic->id)}}">Modifica fumetto</a>
+    </div>
+
+    <div>
+        <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+            @csrf
+            @method('DELETE')
+
+            <button type="submit">Cancella</button>
+        </form>
+    </div>
 </main>
 @endsection
